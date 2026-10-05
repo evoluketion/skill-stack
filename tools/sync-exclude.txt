@@ -1,0 +1,3 @@
+# Installed skills and commands that are deliberately kept out of this repo.
+# sync.py status and the sync hook skip these. One name per line; commands are
+# written with their leading slash.
