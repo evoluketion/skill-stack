@@ -17,6 +17,8 @@ What happens:
 
 1. The issue is read with `gh issue view`: title, body, labels, state, assignees and
    milestone. Screenshots are stripped from the body (and mentioned).
+   If the body is blank, the plan is built from the title and the codebase, and the
+   gaps are listed as open questions.
 2. `create-branch` previews the branch and **asks you to confirm** before creating it.
    The preview shows the repo, the base branch and the branch name:
    ```
@@ -61,7 +63,8 @@ The skill stops and asks rather than guessing when:
 - you named a different repo from the one you're in (`start #42 in budget-app` while the
   session is open on `dotfiles`), or pasted an issue URL from another repo;
 - the issue is already closed;
-- the body is empty or only a link. It offers to read the comments or the linked page.
+- the body is only a link, or is empty under a title too vague to plan from. It offers
+  to read the comments or the linked page.
 
 ## 2. Build it: `begin-work`
 

@@ -69,8 +69,16 @@ or `<img … src="…">` tags. They're unreadable here, so strip them before you
 the body or pass it to the Architect, but mention that the issue has screenshots in case
 they matter.
 
-If the body is empty or is nothing but a link, say so plainly and offer the two cheap next
-steps — read the comments, or fetch the linked page — instead of proceeding on nothing.
+If the body is **blank**, don't stop — plan from the title and the codebase. Say in one
+line that the body is empty and the plan is built from the title, then carry on. Tell the
+Architect the body is blank, so it states its assumptions rather than presenting them as
+the issue's requirements, and every gap the title leaves open (scope, behaviour, platforms,
+anything a body would normally settle) goes under **Open questions** in the plan. Only
+stop when the title is too vague to plan from on its own ("Fix bug", "Update") — then offer
+the comments instead.
+
+If the body is nothing but a link, say so plainly and offer the two cheap next steps —
+read the comments, or fetch the linked page — instead of proceeding on nothing.
 `references/github-issues.md` covers the other quirks (task lists, cross-references,
 templates, state vocabulary); read it when an issue returns something surprising.
 
@@ -306,8 +314,10 @@ the cost of one question:
 - **More than one directory attached to the session.** Ask which one; don't pick.
 - **An issue URL or repo name that doesn't match the repo you're in.**
 - **An issue that's already `CLOSED`**, or already has a branch with commits on it.
-- **An issue with nothing actionable in it.** Offer the comments or the linked page; don't
-  send the Architect in blind or invent requirements.
+- **An issue with nothing actionable in it** — a link-only body, or a blank body under a
+  title too vague to plan from. Offer the comments or the linked page; don't send the
+  Architect in blind or invent requirements. A blank body under a meaningful title is
+  *not* this case: plan from the title and list the gaps as open questions (step 1).
 
 And never create the branch without the confirmation in step 3, even when the issue and
 the repo both look obvious. It is the only step that changes anything the user would have
